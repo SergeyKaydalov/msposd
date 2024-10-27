@@ -558,6 +558,12 @@ int y_end = 500;
         linethickness=3;
     }
 
+    int cross_lenght = 15;
+
+
+    drawLineI4(bmpBuff.pData, OVERLAY_WIDTH, OVERLAY_HEIGHT, img_center.x-cross_lenght , img_center.y, img_center.x+cross_lenght, img_center.y, COLOR_GREEN, 2);
+    drawLineI4(bmpBuff.pData, OVERLAY_WIDTH, OVERLAY_HEIGHT, img_center.x , img_center.y - cross_lenght, img_center.x, img_center.y + cross_lenght, COLOR_GREEN, 2);
+
     drawLine(bmpBuff.pData, img_center.x-linewidth/2 , img_center.y, img_center.x+linewidth/2, img_center.y, COLOR_WHITE, linethickness);
 
      //drawRectangleI4(bmpBuff.pData, 600 , 400 , 700 , 6, COLOR_GREEN, 1);
